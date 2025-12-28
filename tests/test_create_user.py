@@ -28,7 +28,7 @@ class TestCreateUser:
         pytest.param("password"),
         pytest.param("name")
     ])
-    @allure.title("Создание пользователя без параметра {parameter} возвращает ошибку 403")
+    @allure.title("Создание пользователя без параметра {param} возвращает ошибку 403")
     @allure.description("Проверяем, что при попытке создания пользователя без обязательного параметра в теле запроса возвращается ошибка 403 и корректное сообщение об ошибке")
     def test_create_user_without_required_param_returns_error_403(self, param):
         body = UserFactory.default_body_with_random_params()

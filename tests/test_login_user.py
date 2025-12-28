@@ -18,7 +18,7 @@ class TestLoginUser:
         pytest.param("email"),
         pytest.param("password")
     ])
-    @allure.title("Авторизация пользователя с неверным {parameter} возвращает ошибку 403")
+    @allure.title("Авторизация пользователя с неверным {param} возвращает ошибку 403")
     @allure.description("Проверяем, что при попытке авторизации пользователя с некорректным параметром в теле запроса возвращается ошибка 401 и корректное сообщение об ошибке")
     def test_login_user_with_incorrect_param_returns_error_401(self, param, create_user):
         body = create_user["login_body"]
