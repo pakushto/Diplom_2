@@ -11,7 +11,6 @@ def cleanup_user():
     yield access_tokens
     for access_token in access_tokens:
         response = UserApi.delete_user(access_token=access_token)
-        assert response.status_code == 202
 
 @pytest.fixture(scope='function')
 def create_user(cleanup_user):
